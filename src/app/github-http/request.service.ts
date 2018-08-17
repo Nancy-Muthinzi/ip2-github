@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment'
 export class RequestService {
 
 get(){
-  return this.http.get(environment.apiUrl)
+  // return this.http.get(environment.apiUrl)
 
 }
   constructor(private http: HttpClient) { }
