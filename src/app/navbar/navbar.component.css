@@ -1,6 +1,17 @@
+h1 {
+  color: darkblue;
+  font-family: Black Ops One;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.header {
+  text-align: center;
+}
+
 .topnav {
   background-color: black;
 }
 #search {
-  width: 80%;
+  width: 90%;
 }
