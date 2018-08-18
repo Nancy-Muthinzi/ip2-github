@@ -13,10 +13,10 @@ export class HomepageComponent implements OnInit {
   constructor(private http: HttpClient, public request: RequestService) { }
 
   ngOnInit() {
-    // this.request.get().subscribe(result => {
-    //   this.result$ = result.data
-    //   console.log(result.data)
+    this.request.get().subscribe(result => {
+      this.result$ = result.data
+      console.log(result.data)
 
-    // }
-}
+    }
+ }
 }
