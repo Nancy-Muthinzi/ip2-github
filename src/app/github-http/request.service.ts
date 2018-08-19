@@ -6,18 +6,23 @@ import { environment } from '../../environments/environment'
   providedIn: 'root'
 })
 export class RequestService {
-  private user: string;
-  private repo: string;
+  github$;
 
-  get() {
-    return this.http.get(environment.apiUrl)
-
-  }
   constructor(private http: HttpClient) {
-    console.log("")
-    this.user = 'Nancy-Muthinzi';
   }
-  getUserInfo() {
-    return this.http.get("https://api.github.com/users/" + this.user).map(res => res.json());
+
+  gitRequest() {
+    interface ApiResponse {
+      user: string;
+      repo: string;
+    }
+
+    let promise = new Promise((resolve, reject) => {
+      this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response => {
+        resolve()
+      },
+      )
+    })
+    return Promise
   }
 }

@@ -5,18 +5,20 @@ import { RequestService } from '../github-http/request.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
+  providers:[RequestService],
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  result$;
+link: "https://api.github.com/users/Nancy-Muthinzi?access_token=446e0de6c96a052c10a5ad804533f3483831daed";
+  private user: any[];
 
-  constructor(private http: HttpClient, public request: RequestService) { }
+  constructor(private http: HttpClient, public request: RequestService) {
+    // this.requestService.getUserInfo().subscribe(user => {
+    //   console.log(user);
+    //   this.user = user;
+    // });
+  }
 
   ngOnInit() {
-    this.request.get().subscribe(result => {
-      this.result$ = result.data
-      console.log(result.data)
-
-    }
- }
+  }
 }

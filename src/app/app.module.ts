@@ -1,23 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 
 import { RequestService } from './github-http/request.service';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AboutComponent } from './about/about.component';
 
-
+import {RoutingModule} from './routing/routing.module'
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [
+  { path: "github", component: HomepageComponent },
+  { path: "about", component: AboutComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    HomepageComponent
+    SearchbarComponent,
+    HomepageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [RequestService],
   bootstrap: [AppComponent]

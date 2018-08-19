@@ -1,7 +1,7 @@
 h1 {
   color: darkblue;
   font-family: Black Ops One;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -9,7 +9,7 @@ h1 {
   text-align: center;
 }
 
-.topnav {
+.searchbar {
   background-color: black;
 }
 #search {
