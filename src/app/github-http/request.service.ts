@@ -9,10 +9,12 @@ import { Repos } from '../repos'
 })
 export class RequestService {
   homepage: Nancy;
+  repos: Repos;
 
 
   constructor(private http: HttpClient) {
     this.homepage = new Nancy("", "", "")
+    this.repos = new Repos("")
   }
 
   nancyRequest() {

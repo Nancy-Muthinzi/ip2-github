@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { RequestService } from '../github-http/request.service';
 import { Nancy } from '../nancy'
+import { Repos } from '../repos'
 
 @Component({
   selector: 'app-homepage',
@@ -11,6 +12,7 @@ import { Nancy } from '../nancy'
 })
 export class HomepageComponent implements OnInit {
   homepage: Nancy;
+  repos: Repos;
 
   constructor(private http: HttpClient, public request: RequestService) {
   }
@@ -18,7 +20,10 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     this.request.nancyRequest()
     this.homepage=this.request.homepage
-    
+
+    this.request.reposRequest()
+    this.repos=this.request.repos
+
 
     console.log(this.homepage)
   }
