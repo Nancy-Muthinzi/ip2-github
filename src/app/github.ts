@@ -1,3 +1,3 @@
 export class Github {
-  constructor(public avatar_url:string, public login:string){}
+  constructor(public user:string, public repo:string){}
 }

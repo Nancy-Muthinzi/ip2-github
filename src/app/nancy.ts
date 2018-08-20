@@ -1,3 +1,3 @@
 export class Nancy {
-  constructor(public avatar_url:string, public login:string){}
+  constructor(public avatar_url:any, public login:string, public repos:string){}
 }

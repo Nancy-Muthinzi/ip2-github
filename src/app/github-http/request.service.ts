@@ -15,7 +15,7 @@ export class RequestService {
 
   nancyRequest() {
     interface ApiResponse {
-      avatar_url: string;
+      avatar_url: any;
       login: string;
     }
 
@@ -27,7 +27,7 @@ export class RequestService {
       },
       error=>{
         this.homepage.avatar_url="not found"
-        this.homepage.login="try again"
+        this.homepage.login="not found"
         reject(error)
       }
       )
