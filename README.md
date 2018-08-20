@@ -22,7 +22,7 @@ Link deployed live on https://nancy-muthinzi.github.io/ip2-github/
 ## Setup/Installation Requirements
 You will need to have Angular CLI and Node to be able to run the app.
 - Open terminal
-- Run ng serve --open to open it on a browser
+- Run ng serve --open for a dec server
 
 ## Known Bugs
 
