@@ -1,3 +1,3 @@
 export class Repos {
-  constructor(public repos:any){}
+  constructor(public repository:any){}
 }

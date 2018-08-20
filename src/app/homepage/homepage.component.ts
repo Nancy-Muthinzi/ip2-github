@@ -13,6 +13,7 @@ import { Repos } from '../repos'
 export class HomepageComponent implements OnInit {
   homepage: Nancy;
   repos: Repos;
+  repository: any;
 
   constructor(private http: HttpClient, public request: RequestService) {
   }
@@ -22,7 +23,8 @@ export class HomepageComponent implements OnInit {
     this.homepage=this.request.homepage
 
     this.request.reposRequest()
-    this.repos=this.request.repos
+    this.repository=this.request
+    console.log(this.repository)
 
 
     console.log(this.homepage)
