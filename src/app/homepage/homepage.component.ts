@@ -21,5 +21,14 @@ link: "https://api.github.com/users/Nancy-Muthinzi?access_token=446e0de6c96a052c
   }
 
   ngOnInit() {
+
+    interface ApiResponse{
+      user:string;
+      repo:string;
+    }
+    this.http.get<ApiResponse>("https://api.github.com/users/Nancy-Muthinzi?access_token=446e0de6c96a052c10a5ad804533f3483831daed").subscribe(data=>{
+      // this.github= new Github(data.user, data.repo)
+
+    })
   }
 }
