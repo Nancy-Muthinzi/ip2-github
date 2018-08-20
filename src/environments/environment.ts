@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl:"https://api.github.com/users/Nancy-Muthinzi?access_token=446e0de6c96a052c10a5ad804533f3483831daed",
-  apiKey:"446e0de6c96a052c10a5ad804533f3483831daed"
+  apiUrl:"446e0de6c96a052c10a5ad804533f3483831daed",
+  // apiKey:"446e0de6c96a052c10a5ad804533f3483831daed"
 };
 
 /*
