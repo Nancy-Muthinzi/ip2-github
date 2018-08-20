@@ -19,6 +19,7 @@ export class HomepageComponent implements OnInit {
     this.request.nancyRequest()
     this.homepage=this.request.homepage
     
+
     console.log(this.homepage)
   }
 }

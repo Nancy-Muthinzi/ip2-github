@@ -4,12 +4,15 @@
   <div class="row">
     <div class="col-md-6">
       <img src="{{homepage.avatar_url}}"><br>
-      <a href="https://github.com/Nancy-Muthinzi">{{homepage.login}}</a>
+      <a href="https://github.com/Nancy-Muthinzi">Username: {{homepage.login}}</a>
+      <p>Email address: nanciekathini@gmail.com</p><br>
     </div>
 
-    <div class=col-md-6>
-      <p>Here's a list of my repositories ...</p>
-
+    <div class=col-md-6 id="repos">
+      <p>Here's a list of my repositories:</p>
+      <h3>{{homepage.repos}}</h3>
     </div>
   </div>
 </div>
+
+<p *ng If='repos.length > 5'>Show more repositories</p>
