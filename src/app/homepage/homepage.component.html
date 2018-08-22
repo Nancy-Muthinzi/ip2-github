@@ -10,11 +10,11 @@
 
     <div class=col-md-6 id="repos">
       <p>Here's a list of my repositories:</p>
-      <div *ngFor="let repository of repositories, let i=index">
-        <h3>{{repository.repository[0].name}}</h3>
+      <div *ngFor="let repository of repositories; let i=index">
+        <h3>{{repository.repository[index].name}}</h3>
       </div>
     </div>
 
-    <p *ng If='repos.length > 6'>Show more repositories</p>
+    <!-- <p *ng If='repos.length > 6'>Show more repositories</p> -->
   </div>
 </div>
