@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 
 import {RoutingModule} from './routing/routing.module'
 import { RouterModule, Routes } from '@angular/router';
+import { UnderlineDirective } from './underline.directive';
 const routes: Routes = [
   { path: "github", component: HomepageComponent },
   { path: "about", component: AboutComponent }
@@ -20,7 +21,8 @@ const routes: Routes = [
     AppComponent,
     SearchbarComponent,
     HomepageComponent,
-    AboutComponent
+    AboutComponent,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,

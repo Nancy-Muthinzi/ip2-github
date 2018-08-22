@@ -11,11 +11,13 @@ export class RequestService {
   homepage: Nancy;
   repos: Repos;
   repository: any;
+  // github: Github;
 
 
   constructor(private http: HttpClient) {
     this.homepage = new Nancy("", "", "")
     this.repos = new Repos("")
+    // this.github = new Github("", "")
   }
 
   nancyRequest() {
@@ -42,22 +44,46 @@ export class RequestService {
     return Promise
   }
 
-    reposRequest() {
-      interface ApiResponse {
-        repos: any;
-      }
-      let promise = new Promise((resolve, reject) => {
-        this.http.get<ApiResponse>("https://api.github.com/users/Nancy-Muthinzi/repos?access_token=" + environment.apiUrl).toPromise().then(response => {
-          this.repository = response
-          console.log(this.homepage.repos)
-          resolve()
-        },
-          error => {
-            this.homepage.repos = "not found"
-            reject(error)
-          }
-        )
-      })
-      return Promise
+  reposRequest() {
+    interface ApiResponse {
+      repos: any;
     }
+    let promise = new Promise((resolve, reject) => {
+      this.http.get<ApiResponse>("https://api.github.com/users/Nancy-Muthinzi/repos?access_token=" + environment.apiUrl).toPromise().then(response => {
+        this.repository = response
+        console.log(this.homepage.repos)
+        resolve()
+      },
+        error => {
+          this.homepage.repos = "not found"
+          reject(error)
+        }
+      )
+    })
+    return Promise
   }
+}
+
+// githubRequest() {
+//   interface ApiResponse {
+//     user: string;
+//     repo: any;
+//   }
+//
+//   let promise = new Promise((resolve, reject) => {
+//     this.http.get<ApiResponse>("environment.apiUrl").toPromise().then(response => {
+//       this.searchbar.user = response.user
+//       this.searchbar.repo = response.repo
+//       console.log(this.github.user)
+//       resolve()
+//     },
+//       error => {
+//         this.searchbar.user = "not found"
+//         this.searchbar.repo = "not found"
+//         reject(error)
+//       }
+//     )
+//   })
+//   return Promise
+// }
+// }
