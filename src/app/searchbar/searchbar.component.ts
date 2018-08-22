@@ -16,12 +16,13 @@ export class SearchbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.request.githubRequest()
-    // this.searchbar = this.request.searchbar
-
-    // this.request.githubRequest()
-    // this.repository = this.request
-
-    console.log(this.searchbar)
-  }
+  //   this.request.githubRequest()
+  //   this.searchbar = this.request.searchbar
+  //
+  //   this.request.githubRequest()
+  //   this.repository = this.request
+  //
+  //   console.log(this.searchbar)
+  // }
+}
 }

@@ -67,7 +67,7 @@ export class RequestService {
 // githubRequest() {
 //   interface ApiResponse {
 //     user: string;
-//     repo: any;
+//     repositories =[];
 //   }
 //
 //   let promise = new Promise((resolve, reject) => {
@@ -85,5 +85,4 @@ export class RequestService {
 //     )
 //   })
 //   return Promise
-// }
 // }
